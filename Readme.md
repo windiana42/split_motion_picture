@@ -12,6 +12,10 @@ This build script assumes a gcc compiler setup and make available on path.
 make
 ```
 
+# Installation
+There is no install section in the Makefile. I did not want to pull of full autoconf/automake machinery for this little project.
+Simply copy the generated ./split_video executable somehwere on the path (i.e. `~/bin/`).
+
 # Run
 
 The following command assumes running in a shell that expands *.jpg to individual file names as `bash` does it.
