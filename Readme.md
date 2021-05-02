@@ -13,7 +13,22 @@ make
 ```
 
 # Run
+
 The following command assumes running in a shell that expands *.jpg to individual file names as `bash` does it.
 ```bash
 ./split_video *.jpg
+```
+
+You can also put generated files in a different directory:
+```bash
+./split_video *.jpg out/
+```
+
+I will use this by first moving .MP.jpg files to a directory marked for deletion 
+and then run this script to copy parts where the photos are kept initially:
+```bash
+cd <my photo & video directory>
+mkdir to_delete/
+mv *.MP.jpg to_delete/
+split_video to_delete/*.jpg ./
 ```
