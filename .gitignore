@@ -1,4 +1,6 @@
 /split_video
 
+# valgrind core dumps
+/vgcore*
 # a place to put stuff that will never be committed
 /target

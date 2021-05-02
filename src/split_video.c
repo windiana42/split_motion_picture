@@ -164,6 +164,10 @@ void copy_part(char *in_filename, char *out_filename, long start, long end) {
 
 void process_file(char *filename, char *dir) {
     FILE *fh = fopen(filename, "rb");
+    if(fh == NULL) {
+        fprintf(stderr, "Failed opening file for reading: %s: %s\n", filename, strerror(errno));
+        exit(-1);
+    }
     long jpg_end = get_jpg_end(fh);
     long mp4_begin = get_mp4_begin(fh);
     fclose(fh);
